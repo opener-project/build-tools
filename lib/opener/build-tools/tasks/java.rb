@@ -5,17 +5,19 @@
 #
 
 namespace :java do
-  desc 'Removes all built files'
-  task :clean do
-    Dir.chdir(CORE_DIRECTORY) do
-      sh 'mvn clean'
-    end
-  end
-
   desc 'Installs Java packages in core/'
   task :compile do
     Dir.chdir(CORE_DIRECTORY) do
       sh "mvn package"
+    end
+  end
+
+  namespace :clean do
+    desc 'Removes built Java packages'
+    task :packages do
+      Dir.chdir(CORE_DIRECTORY) do
+        sh 'mvn clean'
+      end
     end
   end
 end

@@ -26,6 +26,21 @@ module Opener
       def pip_install(file, target)
         sh("pip install --requirement=#{file} --target=#{target}")
       end
+
+      ##
+      # Installs a set of Python packages in a given directory based on a
+      # requirements file. If the directory is not empty this process is
+      # aborted.
+      #
+      # @param [String] file The requirements file to install.
+      # @param [String] directory The name of the directory to install the
+      #  packages into.
+      #
+      def install_python_packages(requirements, directory)
+        return unless directory_contents(directory).empty?
+
+        pip_install(requirements, directory)
+      end
     end # Python
   end # BuildTools
 end # Opener
