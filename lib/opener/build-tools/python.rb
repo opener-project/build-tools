@@ -24,7 +24,9 @@ module Opener
       # @param [String] target The target directory to install packages in.
       #
       def pip_install(file, target)
-        sh("pip install --requirement=#{file} --target=#{target}")
+        Rake::FileUtilsExt.sh(
+          "pip install --requirement=#{file} --target=#{target}"
+        )
       end
 
       ##
