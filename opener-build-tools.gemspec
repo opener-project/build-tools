@@ -10,6 +10,5 @@ Gem::Specification.new do |gem|
 
   gem.files = `git ls-files`.split("\n")
 
-  gem.add_development_dependency 'bundler'
   gem.add_development_dependency 'rake'
 end
