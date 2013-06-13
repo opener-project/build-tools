@@ -8,6 +8,8 @@ Gem::Specification.new do |gem|
   gem.description = gem.summary
   gem.homepage    = 'http://opener-project.github.com'
 
+  gem.required_ruby_version '>= 1.9.2'
+
   gem.files = `git ls-files`.split("\n")
 
   gem.add_dependency 'rake'
