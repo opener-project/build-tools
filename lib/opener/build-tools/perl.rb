@@ -18,7 +18,7 @@ module Opener
       # @param [String] name The full name of the Perl module.
       #
       def require_perl_module(name)
-        print "Checking for Perl module #{name}..."
+        print "Checking for Perl module #{name}... "
 
         path = `perldoc -l #{name} 2>&1`.strip
 
