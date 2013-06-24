@@ -20,7 +20,7 @@ module Opener
       def require_perl_module(name)
         print "Checking for Perl module #{name}..."
 
-        path = `perldoc #{name} 2>&1`
+        path = `perldoc -l #{name} 2>&1`
 
         if File.file?(path)
           puts 'yes'
