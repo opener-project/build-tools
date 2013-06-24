@@ -18,6 +18,16 @@ module Opener
       end
 
       ##
+      # Returns a String containing the Pip version in a RubyGems compatible
+      # format.
+      #
+      # @return [String]
+      #
+      def pip_version
+        return `pip --version 2>&1`.match(/pip\s+([\d\.]+)/)[1]
+      end
+
+      ##
       # Installs the packages in the requirements file in a specific directory.
       #
       # @param [String] file The requirements file to use.
