@@ -8,21 +8,17 @@ module Opener
       module_function
 
       ##
-      # Checks if a given Perl module is installed using `perldoc`. Note that
-      # due to the use of `perldoc` this requires the module to have at least
-      # some documentation. However, most Perl modules available on cpan have
-      # documentation one way or another so this shouldn't be a problem.
-      #
-      # If the module can not be found the current script is terminated.
+      # Checks if a given Perl module is installed. If the module can not be
+      # found the current script is terminated.
       #
       # @param [String] name The full name of the Perl module.
       #
       def require_perl_module(name)
         print "Checking for Perl module #{name}... "
 
-        path = `perldoc -l #{name} 2>&1`.strip
+        output = `perl -M#{name} -e 'print "exists";' 2>&1`.strip
 
-        if File.file?(path)
+        if output == 'exists'
           puts 'yes'
         else
           abort 'no'
