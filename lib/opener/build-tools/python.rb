@@ -35,7 +35,8 @@ module Opener
       #
       def pip_install(file, target)
         Rake::FileUtilsExt.sh(
-          "pip install --requirement=#{file} --target=#{target}"
+          "pip install --requirement=#{file} --target=#{target} " \
+            "--ignore-installed"
         )
       end
 
