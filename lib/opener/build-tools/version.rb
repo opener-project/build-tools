@@ -1,5 +1,5 @@
 module Opener
   module BuildTools
-    VERSION = '0.2.9'
+    VERSION = '0.2.10'
   end # BuildTools
 end # Opener

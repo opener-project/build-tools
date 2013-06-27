@@ -24,7 +24,7 @@ module Opener
       # @return [String]
       #
       def pip_version
-        return `pip --version 2>&1`.match(/pip\s+([\d\.]+)/)[1]
+        return `pip --version 2>&1`.match(/pip\s+([\d\.]+)/)[1].chomp('.')
       end
 
       ##
