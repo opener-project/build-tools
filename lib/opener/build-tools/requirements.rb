@@ -67,6 +67,7 @@ module Opener
       # @return [TrueClass|FalseClass]
       #
       def version_greater_than(left, right)
+	print "mierieireire"
         return Gem::Version.new(left) >= Gem::Version.new(right)
       end
     end # Requirements

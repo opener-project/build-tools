@@ -14,7 +14,10 @@ module Opener
       # @return [String]
       #
       def python_version
-        return `python --version 2>&1`.split(/\s/)[1]
+	$lag = `python --version 2>&1`.split(/\s/)[1]
+	$lag.gsub!(/([\d\.])\+/, '\1')
+	return $lag
+ #       return `python --version 2>&1`.split(/\s/)[1]
       end
 
       ##
