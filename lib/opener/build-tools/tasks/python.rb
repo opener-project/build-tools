@@ -20,7 +20,9 @@ namespace :python do
     requirements.each do |file, directory|
       path = File.join(PYTHON_SITE_PACKAGES, directory)
 
-      Opener::BuildTools::Python.install_python_packages(file, path)
+      if File.file?(file)
+        Opener::BuildTools::Python.install_python_packages(file, path)
+      end
     end
   end
 
