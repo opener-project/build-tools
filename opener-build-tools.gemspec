@@ -10,7 +10,11 @@ Gem::Specification.new do |gem|
 
   gem.required_ruby_version = '>= 1.9.2'
 
-  gem.files = `git ls-files`.split("\n")
+  gem.files = Dir.glob([
+    'lib/**/*.*',
+    '*.gemspec',
+    'README.md'
+  ])
 
   gem.add_dependency 'rake'
 end
