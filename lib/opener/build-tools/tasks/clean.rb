@@ -7,7 +7,7 @@
 namespace :clean do
   desc 'Removes tmp files'
   task :tmp do
-    sh("rm -f #{File.join(TMP_DIRECTORY, '*.kaf')}")
+    sh("rm -f #{File.join(TMP_DIRECTORY, '*.*')}")
   end
 
   desc 'Removes all built Gem files'
