@@ -7,6 +7,7 @@ Gem::Specification.new do |gem|
   gem.summary     = 'Various build tools for OpeNER projects.'
   gem.description = gem.summary
   gem.homepage    = 'http://opener-project.github.com'
+  gem.license     = 'Apache 2.0'
 
   gem.required_ruby_version = '>= 1.9.2'
 
