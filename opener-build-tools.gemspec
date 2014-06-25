@@ -14,7 +14,8 @@ Gem::Specification.new do |gem|
   gem.files = Dir.glob([
     'lib/**/*.*',
     '*.gemspec',
-    'README.md'
+    'README.md',
+    'LICENSE.txt'
   ])
 
   gem.add_dependency 'rake'
