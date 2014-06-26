@@ -1,5 +1,8 @@
 # Build Tools
 
+**NOTE:** This repository is deprecated as most of its functionality has been
+moved to repository specific Rake tasks.
+
 The OpeNER build tools is a Gem that contains a collection of helper methods
 and Rake tasks that ease the process of wrapping and distributing the various
 OpeNER Gems.
